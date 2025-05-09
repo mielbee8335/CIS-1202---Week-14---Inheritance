@@ -9,10 +9,10 @@ private:
 
 public:
 	Truck(); // Default constructor
-	Truck(string itemOem, int itemYear, double towCapacity);
+	Truck(string, int, double);
 
-	void set towCapacity();
-	double towCapacity(double itemTowCap);
+	void setTowCapacity(double cap);
+	double getTowCapacity();
 
 	void displayInfo();
 
