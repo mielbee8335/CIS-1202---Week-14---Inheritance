@@ -7,17 +7,29 @@ using namespace std;
 
 Car::Car()
 {
+	Vehicle();
 	numDoors = 0;
 }
 
-Car::Car(int doors)
+Car::Car(string oem, int year, int doors)
+{
+	Vehicle(oem, year);
+	numDoors = doors;
+}
+
+void Car::setNumDoors(int doors)
 {
 	numDoors = doors;
 }
 
-void Car::displayCarInfo()
+int Car::getNumDoors()
 {
-	displayInfo();
+	return numDoors;
+}
+
+void Car::displayInfo()
+{
+	Vehicle::displayInfo();
 	cout << "\nNumber of doors: " << numDoors << endl;
 }
 

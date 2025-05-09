@@ -19,9 +19,20 @@ Vehicle::Vehicle(string itemOem, int itemYear)
 	year = itemYear;
 }
 
+void Vehicle::setOem(string itemOem)
+{
+	oem = itemOem;
+}
+
+
 string Vehicle::getOem()
 {
 	return oem;
+}
+
+void Vehicle::setYear(int itemYear)
+{
+	year = itemYear;
 }
 
 int Vehicle::getYear()

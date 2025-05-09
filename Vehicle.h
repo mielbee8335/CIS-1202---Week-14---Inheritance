@@ -12,8 +12,13 @@ private:
 public:
 	Vehicle(); // Default constructor
 	Vehicle(string itemOem, int itemYear);
+	
+	void setOem(string itemOem);
 	string getOem();
+	
+	void setYear(int itemYear);
 	int getYear();
+	
 	void displayInfo();
 };
 
