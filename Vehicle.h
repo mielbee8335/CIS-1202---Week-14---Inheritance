@@ -8,7 +8,7 @@ class Vehicle
 {
 private:
 	string oem;
-	int year;
+	int yearBuilt;
 public:
 	Vehicle(); // Default constructor
 	Vehicle(string itemOem, int itemYear);

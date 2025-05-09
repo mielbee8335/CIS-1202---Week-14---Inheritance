@@ -10,13 +10,13 @@ using namespace std;
 Vehicle::Vehicle() // Default constructor
 {
 	oem = "";
-	year = 0;
+	yearBuilt = 0;
 }
 
 Vehicle::Vehicle(string itemOem, int itemYear)
 {
 	oem = itemOem;
-	year = itemYear;
+	yearBuilt = itemYear;
 }
 
 void Vehicle::setOem(string itemOem)
@@ -32,17 +32,17 @@ string Vehicle::getOem()
 
 void Vehicle::setYear(int itemYear)
 {
-	year = itemYear;
+	yearBuilt = itemYear;
 }
 
 int Vehicle::getYear()
 {
-	return year;
+	return yearBuilt;
 }
 
 void Vehicle::displayInfo()
 {
 	cout << "\nVehicle manufacturer: " << oem;
-	cout << "\nYear of manufacture: " << year;
+	cout << "\nYear of manufacture: " << yearBuilt;
 	cout << endl;
 }
