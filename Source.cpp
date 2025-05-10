@@ -57,7 +57,7 @@ int main()
 	Truck truck1;
 	truck1.displayInfo(make, year, cap);
 
-	return 0;
+	cout << endl << endl;
 
-	// make them & references so user input values actually keep
+	return 0;
 }
