@@ -10,12 +10,14 @@ private:
 
 public:
 	Car(); // default constructor
-	Car(string, int, int);	 // constructor
+	Car(string&, int, int);	// constructor
 	
-	void setNumDoors(int numDoors);
+	using Vehicle::Vehicle;
+
+	void setNumDoors(int);
 	int getNumDoors();
 	
-	void displayInfo();
+	void displayInfo(string& m, int y, int doors);
 
 };
 

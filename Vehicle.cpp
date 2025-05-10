@@ -13,15 +13,15 @@ Vehicle::Vehicle() // Default constructor
 	yearBuilt = 0;
 }
 
-Vehicle::Vehicle(string itemOem, int itemYear)
+Vehicle::Vehicle(string &m, int y)
 {
-	oem = itemOem;
-	yearBuilt = itemYear;
+	oem = m;
+	yearBuilt = y;
 }
 
-void Vehicle::setOem(string itemOem)
+void Vehicle::setOem(string &m)
 {
-	oem = itemOem;
+	oem = m;
 }
 
 
@@ -30,9 +30,9 @@ string Vehicle::getOem()
 	return oem;
 }
 
-void Vehicle::setYear(int itemYear)
+void Vehicle::setYear(int y)
 {
-	yearBuilt = itemYear;
+	yearBuilt = y;
 }
 
 int Vehicle::getYear()
@@ -40,9 +40,11 @@ int Vehicle::getYear()
 	return yearBuilt;
 }
 
-void Vehicle::displayInfo()
+void Vehicle::displayInfo(string &m, int y)
 {
-	cout << "\nVehicle manufacturer: " << oem;
-	cout << "\nYear of manufacture: " << yearBuilt;
-	cout << endl;
+	cout << "Vehicle information:" << endl;
+	setOem(m);
+	cout << "\tVehicle manufacturer: " << getOem() << endl;
+	setYear(y);
+	cout << "\tYear of manufacture: " << getYear() << endl;
 }

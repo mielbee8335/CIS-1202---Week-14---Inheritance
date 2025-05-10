@@ -5,16 +5,18 @@
 class Truck : public Vehicle
 {
 private:
-	double towCapacity;
+	int towCapacity;
 
 public:
 	Truck(); // Default constructor
-	Truck(string, int, double);
+	Truck(string &, int, int);
 
-	void setTowCapacity(double cap);
-	double getTowCapacity();
+	using Vehicle::Vehicle;
 
-	void displayInfo();
+	void setTowCapacity(int);
+	int getTowCapacity();
+
+	void displayInfo(string &, int, int);
 
 };
 

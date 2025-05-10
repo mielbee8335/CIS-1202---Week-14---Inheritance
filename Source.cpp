@@ -16,49 +16,48 @@ int main()
 	// Vehicle/Car/Truck variables:
 
 	string make;
-	int year, doors;
-	double tow;
+	int year, doors, cap;
 
 	// Populate then display a Vehicle instance
 
-	cout << "\nEnter the following information: " << endl;
-	cout << "\tVehicle Make: ";
-	cin.ignore();
+	cout << "\nVehicle:" << endl;
+	cout << "\tEnter the manufacturer: ";
 	getline(cin, make);
-	cout << "\tVehicle Year: ";
+	cout << "\tEnter the year built: ";
 	cin >> year;
-	cout << endl;
+	cin.ignore(); // Flush newline characters
+
 	Vehicle veh1;
-	veh1.displayInfo();
+	veh1.displayInfo(make, year);
 
 	// Populate then display a Car instance
 
-	cout << "\nEnter the following information: " << endl;
-	cout << "\tVehicle Make: ";
-	cin.ignore();
+	cout << "\nCar:" << endl;
+	cout << "\tEnter the manufacturer: ";
 	getline(cin, make);
-	cout << "\tVehicle Year: ";
+	cout << "\tEnter the year built: ";
 	cin >> year;
-	cout << "\tNumber of doors: ";
+	cout << "\tEnter the number of doors: ";
 	cin >> doors;
+	cin.ignore(); // Flush newline characters
 
 	Car car1;
-	car1.displayInfo();
+	car1.displayInfo(make, year, doors);
 
 	// Populate then display a Truck instance
 
-	cout << "\nEnter the following information: " << endl;
-	cout << "\tVehicle make : ";
-	cin.ignore();
-	getline (cin, make);
-	cout << year;
-	cout << "\tNumber of doors: ";
-	cin >> doors;
+	cout << "\nTruck:" << endl;
+	cout << "\tEnter the manufacturer: ";
+	getline(cin, make);
+	cout << "\tEnter the year built: ";
+	cin >> year;
+	cout << "\tEnter the towing capacity: ";
+	cin >> cap;
 
 	Truck truck1;
-	truck1.displayInfo();
+	truck1.displayInfo(make, year, cap);
 
 	return 0;
 
-
+	// make them & references so user input values actually keep
 }

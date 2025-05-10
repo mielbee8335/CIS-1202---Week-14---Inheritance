@@ -11,9 +11,9 @@ Car::Car()
 	numDoors = 0;
 }
 
-Car::Car(string oem, int year, int doors)
+Car::Car(string &m, int y, int doors)
 {
-	Vehicle(oem, year);
+	Vehicle(m,y);
 	numDoors = doors;
 }
 
@@ -27,9 +27,10 @@ int Car::getNumDoors()
 	return numDoors;
 }
 
-void Car::displayInfo()
+void Car::displayInfo(string& m, int y, int doors)
 {
-	Vehicle::displayInfo();
-	cout << "\nNumber of doors: " << numDoors << endl;
+	Vehicle::displayInfo(m, y);
+	setNumDoors(doors);
+	cout << "\tNumber of doors: " << getNumDoors() << endl;
 }
 

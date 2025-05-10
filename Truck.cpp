@@ -8,28 +8,28 @@ using namespace std;
 Truck::Truck()
 {
 	Vehicle();
-	towCapacity = 0.0;
+	towCapacity = 0;
 }
 
-Truck::Truck(string oem, int year, double cap)
+Truck::Truck(string &m, int y, int cap)
 {
-	Vehicle(oem, year);
+	Vehicle(m, y);
 	towCapacity = cap;
 }
 
-void Truck::setTowCapacity(double cap)
+void Truck::setTowCapacity(int cap)
 {
 	towCapacity = cap;
 }
 
-double Truck::getTowCapacity()
+int Truck::getTowCapacity()
 {
 	return towCapacity;
 }
 
-void Truck::displayInfo()
+void Truck::displayInfo(string& m, int y, int cap)
 {
-	Vehicle::displayInfo();
-	cout << "\nTowing Capacity: " << towCapacity << " lbs";
-	cout << endl;
+	Vehicle::displayInfo(m, y);
+	setTowCapacity(cap);
+	cout << "\tTowing Capacity: " << getTowCapacity() << endl;
 }

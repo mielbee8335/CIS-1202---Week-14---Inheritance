@@ -6,20 +6,20 @@ using namespace std;
 
 class Vehicle
 {
-private:
+protected: // Make protected, not private, so derived classes can access
 	string oem;
 	int yearBuilt;
 public:
 	Vehicle(); // Default constructor
-	Vehicle(string itemOem, int itemYear);
+	Vehicle(string & oem, int yearBuilt);
 	
-	void setOem(string itemOem);
+	void setOem(string & oem);
 	string getOem();
 	
-	void setYear(int itemYear);
+	void setYear(int yearBuilt);
 	int getYear();
 	
-	void displayInfo();
+	void displayInfo(string& m, int y);
 };
 
 
